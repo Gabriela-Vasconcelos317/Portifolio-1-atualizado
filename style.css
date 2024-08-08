@@ -1,0 +1,84 @@
+*{ /* resetando config de margem e padding na pagina toda*/
+    margin: 0;
+    padding: 0;
+}
+body{ /* todo o conteudo visual da pagina */
+    background-color:#ffd3d3; /* cor de fundo*/
+    height: 100vh; /*100% tamanho da tela*/
+    box-sizing: border-box; /* limitar a margem */
+    color: #ff3164; /* cor da fonte*/
+}
+
+
+.destaque_titulo{ /*strong*/
+    color:#550606;
+
+}
+
+.apresentacao{ /* main*/
+    margin: 10% 15%; /*topo/ fundo - direita/esquerda*/
+    display: flex; 
+    /* flex-direction: row; section (col esq) e img(col */
+    align-items: center; /* colunas centralizadas*/
+    justify-content: space-between; /*espaço entre as colunas*/
+    width: 1000px;
+}
+
+.apresentacao_texto{ /* section - coluna esquerda*/
+    display: flex; /* caixas h1 p dv */
+    flex-direction: column;
+    width: 50%; /*secao ocupa 50% de largura da caixa main*/
+    gap: 40px; /*espaco entre as caixas dentro da coluna*/
+}
+
+.apresentacao_links_link{ /*tag a - botoes */
+    background-color: #B3093F;
+    /* cor de fundo*/
+    width: 280px; /*largura do botao*/
+    border-radius: 16px; /*arredondamento da borda*/
+    font-size: 24px; /*tamanho da fonte*/
+    font-weight: 600; /* peso da fonte*/
+    padding: 16px; /*espaco entre texto e borda do botao*/
+    gap: 16px;
+    text-decoration: #ade8f4; /*tira o sublinhado*/
+    color: #ffffff;
+    font-family: 'Krona One', sans-serif;
+    /*estilo da fonte*/
+    text-align: center;
+}
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .apresentacao {
+        margin: 5% 10%;
+        flex-direction: column; /* Coloca a imagem e o texto um embaixo do outro */
+        align-items: flex-start; /* Alinha os itens ao início */
+        width: 100%; /* Largura total da tela */
+    }
+
+    .apresentacao_texto {
+        width: 100%; /* O texto ocupa toda a largura disponível */
+    }
+
+    .apresentacao_links_link {
+        width: 100%; /* Botão ocupa toda a largura da tela */
+        padding: 12px; /* Ajusta o padding */
+        font-size: 18px; /* Diminui o tamanho da fonte */
+    }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+    .apresentacao {
+        margin: 2% 5%;
+    }
+
+    .apresentacao_links_link {
+        font-size: 16px; /* Reduz ainda mais o tamanho da fonte */
+        padding: 10px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
